@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<div class="image-container1">
+     <img src="https://i.postimg.cc/SNb7H7Dv/sfl-logo.gif" alt="SFL Logo">
+</div>
+
+<div class="logo-container1">
+            <img src="https://i.postimg.cc/90M8Jz7C/Certification-Badge-FEB-2024-2025.png" alt="Logo1" class="logo1">
+        </div>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMREG Incentive Calculator _ RE</title>
+    <style>
+
+	.image-container1 {
+            text-align: center;
+        }
+
+        body {
+            font-family: 'Times New Roman', serif; /* Changed font family */
+            font-size: 10px; /* Set font size to 10px */
+            margin: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+	    color: black; 
+	    transition: background-color 0.3s ease, color 0.3s ease;
+     }
+.form-group input:hover {
+    background-color: yellow; /* Green background on hover */
+    color: red; /* White text color on hover */
+}
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+        logo-container {
+            position: fixed; /* 'fixed' positions the element relative to the viewport */
+            top: 10px; /* Position 10px from the top of the viewport */
+            right: 10px; /* Position 10px from the right side of the viewport */
+            padding: 10px; /* Adjust padding as needed */
+        }
+        .footer {
+            position: relative;
+        }
+
+.image-container1 {
+            text-align: center;
+        }
+        .top-image {
+            width: 15%;
+            height: auto;
+        }
+
+.logo-container1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px; /* Adjust padding as needed */
+}
+
+.logo1 {
+    height: 100px; /* Adjust logo size as needed */
+    width: auto;  /* Maintain aspect ratio */
+}
+
+
+.marquee {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+            position: fixed;
+            bottom:0;
+            <!--background-color: gray; /* Background color for the notification bar */-->
+            padding: 7px 0; /* Padding for the notification bar */
+            text-align: center; /* Center-align the text */
+	    z-index: 1000;
+	    color: darkblue;
+	    margin: 0;
+        }
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 30s linear infinite;
+        }
+        @keyframes marquee {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+}
+
+    </style>
+</head>
+<body>
+
+    <h1>Incentive Calculator _ RE</h1>
+<hr style="border: 0.5px solid orange;"><br>
+    <div>
+        <div class="form-group">
+            <label for="yearsExperience">Years of Experience:</label>
+            <input type="number" id="yearsExperience" min="0" required>
+        </div>
+        <div class="form-group">
+            <label for="numAdvances">Number of Advances:</label>
+            <input type="number" id="numAdvances" min="0" required>
+        </div>
+        <div class="form-group">
+            <label for="disbursementAmt">Disbursement Amount:</label>
+            <input type="number" id="disbursementAmt" min="0" required>
+        </div>
+        <div class="form-group">
+            <label for="numUsedVehicleCases">Number of Used Vehicle Cases:</label>
+            <input type="number" id="numUsedVehicleCases" min="0" required>
+        </div>
+        <div class="form-group">
+            <label for="numTyreLoanCases">Number of Tyre Loan Cases:</label>
+            <input type="number" id="numTyreLoanCases" min="0" required>
+        </div>
+        <div class="form-group">
+            <label for="fuelLoanCreationPct">Fuel Loan Creation Percentage:</label>
+            <input type="number" id="fuelLoanCreationPct" min="0" max="100" required>
+        </div>
+        <div class="form-group">
+            <label for="netCollectionPct">Net Collection Percentage:</label>
+            <input type="number" id="netCollectionPct" min="0" max="100" required>
+        </div>
+        <div class="form-group">
+            <label for="strikeRatePct">Strike Rate Percentage:</label>
+            <input type="number" id="strikeRatePct" min="0" max="100" required>
+        </div>
+        <div class="form-group">
+            <label for="numFilesHandled">Number of Files Handled:</label>
+            <input type="number" id="numFilesHandled" min="0" required>
+        </div>
+        <div class="form-group">
+            <label for="ednpaReductionCases">EDNPA Reduction Cases:</label>
+            <input type="number" id="ednpaReductionCases" min="0" required>
+        </div>
+        <div class="form-group">
+            <label for="ednpaAdditionCases">EDNPA Addition Cases:</label>
+            <input type="number" id="ednpaAdditionCases" min="0" required>
+        </div>
+
+<br><hr style="border: 0.5px solid orange;">
+<h2 style="padding: 7px;">Zonal Additional Incentive Scheme</h2>
+<hr style="border: 0.5px solid orange;"><br>
+        <div class="form-group">
+            <label for="numcmefrmeq">Numbers of CME & FRMEQ:</label>
+            <input type="number" id="numcmefrmeq" min="0" required>
+        </div>
+        <div class="form-group">
+            <label for="lgv">Numbers of LGV:</label>
+            <input type="number" id="lgv" min="0" required>
+        </div>
+        <div class="form-group">
+            <label for="mhgv">Numbers of MHGV:</label>
+            <input type="number" id="mhgv" min="0" required>
+        </div>
+        <div class="form-group">
+            <label for="psscomand3whlr">Numbers of Passenger Commercial & 3 Wheeler:</label>
+            <input type="number" id="psscomand3whlr" min="0" required>
+        </div>
+        <div class="form-group">
+            <label for="pvtcar">Numbers of Private Car:</label>
+            <input type="number" id="pvtcar" min="0" required>
+	</div>
+	<div class="form-group">
+            <label for="smeseq">Numbers of SME Sequred:</label>
+            <input type="number" id="smeseq" min="0" required>
+	</div>
+	<div class="form-group">
+            <label for="smeunseq">Numbers of SME Unsequred:</label>
+            <input type="number" id="smeunseq" min="0" required>
+	</div>
+<hr style="border: 0.5px solid orange;"><br>
+        <button onclick="calculateIncentive()">Calculate Incentive</button>
+    </div>
+
+
+    <footer class="footer">
+        <div id="result" class="result" style="display:none;">
+            <h2>Zonal Incentive Calculation Result</h2>
+            <p id="commercialVehicleIncentive"></p>
+            <p id="usedVehicleIncentive"></p>
+            <p id="tyreLoanIncentive"></p>
+            <p id="fuelLoanIncentive"></p>
+            <p id="netCollectionIncentive"></p>
+            <p id="strikeRateIncentive"></p>
+            <p id="ednpaReductionIncentive"></p>
+            <p id="ednpaAdditionIncentive"></p>
+            <p id="numcmefrmeqIncentive"></p>
+<br><hr>
+            <h2>Zonal Additional Incentive Calculation Result</h2>
+            <p id="lgvIncentive"></p>
+            <p id="mhgvIncentive"></p>
+            <p id="psscomand3whlrIncentive"></p>
+            <p id="pvtcarIncentive"></p>
+            <p id="smeseqIncentive"></p>
+            <p id="smeunseqIncentive"></p>
+<br><hr>
+            <h3>Total Incentive: <span id="totalIncentive"></span></h3>
+        </div>
+
+        <div class="logo-container">
+            <img src="https://i.postimg.cc/Bn8G084v/Whats-App-Image-2024-08-10-at-5-14-21-PM.jpg" alt="Logo" class="logo">
+        </div>
+<hr style="border: 0.5px solid orange;"><br>
+
+<div class="marquee">
+        <span>Designed & Developed by Mr. Veerendra R Arawade, Regional Office, Belagavi.</span>
+</div>
+    </footer>
+
+    <script>
+        function calculateIncentive() {
+            const yearsExperience = parseInt(document.getElementById('yearsExperience').value);
+            const numAdvances = parseInt(document.getElementById('numAdvances').value);
+            const disbursementAmt = parseInt(document.getElementById('disbursementAmt').value);
+            const numUsedVehicleCases = parseInt(document.getElementById('numUsedVehicleCases').value);
+            const numTyreLoanCases = parseInt(document.getElementById('numTyreLoanCases').value);
+            const fuelLoanCreationPct = parseInt(document.getElementById('fuelLoanCreationPct').value);
+            const netCollectionPct = parseInt(document.getElementById('netCollectionPct').value);
+            const strikeRatePct = parseInt(document.getElementById('strikeRatePct').value);
+            const numFilesHandled = parseInt(document.getElementById('numFilesHandled').value);
+            const ednpaReductionCases = parseInt(document.getElementById('ednpaReductionCases').value) || 0;	
+            const ednpaAdditionCases = parseInt(document.getElementById('ednpaAdditionCases').value) || 0;
+            const numcmefrmeq = parseInt(document.getElementById('numcmefrmeq').value) || 0;
+            const lgv = parseInt(document.getElementById('lgv').value) || 0;
+            const mhgv = parseInt(document.getElementById('mhgv').value) || 0;
+            const psscomand3whlr = parseInt(document.getElementById('psscomand3whlr').value) || 0;
+            const pvtcar = parseInt(document.getElementById('pvtcar').value) || 0;
+            const smeseq = parseInt(document.getElementById('smeseq').value) || 0;
+            const smeunseq = parseInt(document.getElementById('smeunseq').value) || 0;
+
+            let commercialVehicleIncentive = 0;
+            let usedVehicleIncentive = 0;
+            let tyreLoanIncentive = 0;
+            let fuelLoanIncentive = 0;
+            let netCollectionIncentive = 0;
+            let strikeRateIncentive = 0;
+            let ednpaReductionIncentive = 0;
+            let ednpaAdditionIncentive = 0;
+            let numcmefrmeqIncentive = 0;
+            let lgvIncentive = 0;
+            let mhgvIncentive = 0;
+            let psscomand3whlrIncentive = 0;
+            let pvtcarIncentive = 0;
+            let smeseqIncentive = 0;
+            let smeunseqIncentive = 0;
+
+            // Commercial Vehicle Incentive
+            if (yearsExperience <= 1) {
+                if (numAdvances >= 9) {
+                    commercialVehicleIncentive += 500 * numAdvances + (disbursementAmt >= 3000000 ? 300 : disbursementAmt >= 2500000 ? 250 : disbursementAmt >= 2000000 ? 200 : 0) * numAdvances;
+                } else if (numAdvances >= 7) {
+                    commercialVehicleIncentive += 350 * numAdvances + (disbursementAmt >= 2500000 ? 250 : disbursementAmt >= 2000000 ? 200 : 0) * numAdvances;
+                } else if (numAdvances >= 5) {
+                    commercialVehicleIncentive += 300 * numAdvances + (disbursementAmt >= 2000000 ? 200 : 0) * numAdvances;
+                }
+            } else if (yearsExperience > 1 && yearsExperience <= 3) {
+                if (numAdvances >= 10) {
+                    commercialVehicleIncentive += 500 * numAdvances + (disbursementAmt >= 4000000 ? 300 : disbursementAmt >= 3000000 ? 250 : disbursementAmt >= 2500000 ? 200 : 0) * numAdvances;
+                } else if (numAdvances >= 8) {
+                    commercialVehicleIncentive += 350 * numAdvances + (disbursementAmt >= 3000000 ? 250 : disbursementAmt >= 2500000 ? 200 : 0) * numAdvances;
+                } else if (numAdvances >= 6) {
+                    commercialVehicleIncentive += 300 * numAdvances + (disbursementAmt >= 2500000 ? 200 : 0) * numAdvances;
+                }
+            } else if (yearsExperience > 3 && yearsExperience <= 6) {
+                if (numAdvances >= 11) {
+                    commercialVehicleIncentive += 500 * numAdvances + (disbursementAmt >= 5000000 ? 300 : disbursementAmt >= 4000000 ? 250 : disbursementAmt >= 3000000 ? 200 : 0) * numAdvances;
+                } else if (numAdvances >= 9) {
+                    commercialVehicleIncentive += 350 * numAdvances + (disbursementAmt >= 4000000 ? 250 : disbursementAmt >= 3000000 ? 200 : 0) * numAdvances;
+                } else if (numAdvances >= 7) {
+                    commercialVehicleIncentive += 300 * numAdvances + (disbursementAmt >= 3000000 ? 200 : 0) * numAdvances;
+                }
+            } else {
+                if (numAdvances >= 12) {
+                    commercialVehicleIncentive += 500 * numAdvances + (disbursementAmt >= 6000000 ? 300 : disbursementAmt >= 5000000 ? 250 : disbursementAmt >= 4000000 ? 200 : 0) * numAdvances;
+                } else if (numAdvances >= 10) {
+                    commercialVehicleIncentive += 350 * numAdvances + (disbursementAmt >= 5000000 ? 250 : disbursementAmt >= 4000000 ? 200 : 0) * numAdvances;
+                } else if (numAdvances >= 8) {
+                    commercialVehicleIncentive += 300 * numAdvances + (disbursementAmt >= 4000000 ? 200 : 0) * numAdvances;
+                }
+            }
+
+            // Used Vehicle Incentive
+            if (numUsedVehicleCases >= 10) {
+                usedVehicleIncentive += 200 * numUsedVehicleCases;
+            } else if (numUsedVehicleCases >= 7) {
+                usedVehicleIncentive += 150 * numUsedVehicleCases;
+            } else if (numUsedVehicleCases >= 3) {
+                usedVehicleIncentive += 100 * numUsedVehicleCases;
+            }
+
+            // Tyre Loan Incentive
+            if (numTyreLoanCases > 12) {
+                tyreLoanIncentive += 100 * numTyreLoanCases;
+            } else if (numTyreLoanCases > 8) {
+                tyreLoanIncentive += 75 * numTyreLoanCases;
+            } else if (numTyreLoanCases > 4) {
+                tyreLoanIncentive += 50 * numTyreLoanCases;
+            }
+
+            // Fuel Loan Incentive
+            if (fuelLoanCreationPct >= 20) {
+                fuelLoanIncentive += 3000;
+            } else if (fuelLoanCreationPct >= 15) {
+                fuelLoanIncentive += 2000;
+            } else if (fuelLoanCreationPct >= 10) {
+                fuelLoanIncentive += 1000;
+            }
+
+            // Net Collection Incentive (with minimum file count condition)
+            if (numFilesHandled >= 75) {
+                if (netCollectionPct > 100) {
+                    netCollectionIncentive += 3000;
+                } else if (netCollectionPct >= 95) {
+                    netCollectionIncentive += 2500;
+                } else if (netCollectionPct >= 90) {
+                    netCollectionIncentive += 2000;
+                }
+            }
+
+            // Strike Rate Incentive (with minimum file count condition)
+            if (numFilesHandled >= 75) {
+                if (strikeRatePct >= 90) {
+                    strikeRateIncentive += 3000;
+                } else if (strikeRatePct >= 85) {
+                    strikeRateIncentive += 2000;
+                }
+            }
+
+            // EDNPA Incentive
+            ednpaReductionIncentive += 500 * ednpaReductionCases;
+            ednpaAdditionIncentive += (-100) * ednpaAdditionCases;
+
+            // Segment Incentive
+            numcmefrmeqIncentive += 500 * numcmefrmeq;
+            lgvIncentive += 300 * lgv;
+            mhgvIncentive += 400 * mhgv;
+            psscomand3whlrIncentive += 100 * psscomand3whlr;
+            pvtcarIncentive += 200 * pvtcar;
+
+
+            // SME Incentive
+            smeseqIncentive += 1000 * smeseq;
+            smeunseqIncentive += 200 * smeunseq;
+         
+            
+            const totalIncentive = commercialVehicleIncentive + usedVehicleIncentive + tyreLoanIncentive + fuelLoanIncentive + netCollectionIncentive + strikeRateIncentive + ednpaReductionIncentive + ednpaAdditionIncentive + numcmefrmeqIncentive + lgvIncentive + mhgvIncentive + psscomand3whlrIncentive + pvtcarIncentive +smeseqIncentive + smeunseqIncentive;
+
+            document.getElementById('commercialVehicleIncentive').innerText = "Commercial Vehicle Incentive: " + commercialVehicleIncentive;
+            document.getElementById('usedVehicleIncentive').innerText = "Used Vehicle Incentive: " + usedVehicleIncentive;
+            document.getElementById('tyreLoanIncentive').innerText = "Tyre Loan Incentive: " + tyreLoanIncentive;
+            document.getElementById('fuelLoanIncentive').innerText = "Fuel Loan Incentive: " + fuelLoanIncentive;
+            document.getElementById('netCollectionIncentive').innerText = "Net Collection Incentive: " + netCollectionIncentive;
+            document.getElementById('strikeRateIncentive').innerText = "Strike Rate Incentive: " + strikeRateIncentive;
+            document.getElementById('ednpaReductionIncentive').innerText = "EDNPA Reduction Incentive: " + ednpaReductionIncentive;
+            document.getElementById('ednpaAdditionIncentive').innerText = "EDNPA Addition Incentive: " + ednpaAdditionIncentive;
+            document.getElementById('numcmefrmeqIncentive').innerText = "CME and FARMEQ Advance Incentive: " + numcmefrmeqIncentive;
+            
+	    document.getElementById('lgvIncentive').innerText = "LGV Advance Incentive: " + lgvIncentive;
+            document.getElementById('mhgvIncentive').innerText = "MHCV Incentive: " + mhgvIncentive;
+            document.getElementById('psscomand3whlrIncentive').innerText = "Passenger Commercial and 3Wheeler Advance Incentive: " + psscomand3whlrIncentive;
+            document.getElementById('pvtcarIncentive').innerText = "Private Car Advance Incentive: " + pvtcarIncentive;
+	    document.getElementById('smeseqIncentive').innerText = "SME Sequred Advance Incentive: " + smeseqIncentive;
+	    document.getElementById('smeunseqIncentive').innerText = "SME Unsequred Advance Incentive: " + smeunseqIncentive;
+            
+	    document.getElementById('totalIncentive').innerText = totalIncentive;
+
+            document.getElementById('result').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
