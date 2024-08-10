@@ -351,17 +351,18 @@
             ednpaReductionIncentive += 500 * ednpaReductionCases;
             ednpaAdditionIncentive += (-100) * ednpaAdditionCases;
 
-            // Segment Incentive
-            numcmefrmeqIncentive += 500 * numcmefrmeq;
-            lgvIncentive += 300 * lgv;
-            mhgvIncentive += 400 * mhgv;
-            psscomand3whlrIncentive += 100 * psscomand3whlr;
-            pvtcarIncentive += 200 * pvtcar;
 
-
-            // SME Incentive
-            smeseqIncentive += 1000 * smeseq;
-            smeunseqIncentive += 200 * smeunseq;
+	 const totalParameters = numcmefrmeq + lgv + mhgv + psscomand3whlr + pvtcar + smeseq + smeunseq;
+	// Check if the sum is greater than or equal to 5
+	if (totalParameters >= 5) {
+  	  numcmefrmeqIncentive += 500 * numcmefrmeq;
+  	  lgvIncentive += 300 * lgv;
+   	 mhgvIncentive += 400 * mhgv;
+   	 psscomand3whlrIncentive += 100 * psscomand3whlr;
+   	 pvtcarIncentive += 200 * pvtcar;
+   	 smeseqIncentive += 1000 * smeseq;
+    	smeunseqIncentive += 200 * smeunseq;
+	}	
          
             
             const totalIncentive = commercialVehicleIncentive + usedVehicleIncentive + tyreLoanIncentive + fuelLoanIncentive + netCollectionIncentive + strikeRateIncentive + ednpaReductionIncentive + ednpaAdditionIncentive + numcmefrmeqIncentive + lgvIncentive + mhgvIncentive + psscomand3whlrIncentive + pvtcarIncentive +smeseqIncentive + smeunseqIncentive;
